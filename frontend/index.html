@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>
+        Raihat kamshi by maryam | your everything kamshi store
+    </title>
+    <body>
+        <div id="navbar"></div>
+        <div id="hero"></div>
+        <div id="aboutus"></div>
+        <div id="fragrancecollection"></div>
+        <div id="bestsellers"></div>
+        <div id="reviews"></div>
+        <div id="newsletter"></div>
+        <div id="footer"></div>
+    
+        <script>
+            function loadHTML(id, file) {
+                fetch(file)
+                    .then(response => response.text())
+                    .then(data => document.getElementById(id).innerHTML = data);
+            }
+            
+            loadHTML("navbar", "navbar.html");
+            loadHTML("hero", "hero.html");
+            loadHTML("aboutus", "aboutus.html");
+            loadHTML("fragrancecollection", "fragrancecollection.html");
+            loadHTML("bestsellers", "bestsellers.html");
+            loadHTML("reviews", "reviews.html");
+            loadHTML("newsletter", "newsletter.html");
+            loadHTML("footer", "footer.html");
+
+        </script>
+        
+    </body>
+</head>
